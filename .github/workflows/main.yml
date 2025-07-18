@@ -4,5 +4,13 @@ jobs:
   Testing:
     runs-on: ubuntu-latest
     steps:
-      - name: echo test 
-        run: echo "Test "
+      - name: Code Checkout
+        uses: actions/checkout@v4
+
+      - name: Maven Testing
+        run: mvn test
+      
+      - name: Checkstyle
+        run: mvn checkstyle:chekstyle
+
+      
