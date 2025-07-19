@@ -98,7 +98,7 @@ jobs:
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ secrets.REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.run_number }}
 
-      - name: Deploy Amazon ECS task definition
+      - name: Deploy Amazon ECS Task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
