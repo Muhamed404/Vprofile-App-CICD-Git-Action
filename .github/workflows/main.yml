@@ -46,6 +46,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_URL }} 
   BUILD_AND_PUSH:
+    needs: Testing
     runs-on: ubuntu-latest
     steps:
       - name: Code Checkout
@@ -66,7 +67,7 @@ jobs:
             cache_from: ${{ secrets.cache }}
             repo: vprofile-app
             region: ${{ env.AWS_REGION }}
-            auto_tag: latest,${{ github.run_number }}
+            auto_tag: "latest,${{ github.run_number }}"
             daemon_off: false
             dockerfile: ./Dockerfile
             context: ./
