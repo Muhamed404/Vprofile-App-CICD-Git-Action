@@ -67,7 +67,7 @@ jobs:
             cache_from: ${{ secrets.cache }}
             repo: vprofile-app
             region: ${{ env.AWS_REGION }}
-            auto_tag: "latest,${{ github.run_number }}"
+            tags: "latest,${{ github.run_number }}"
             daemon_off: false
             dockerfile: ./Dockerfile
             context: ./
