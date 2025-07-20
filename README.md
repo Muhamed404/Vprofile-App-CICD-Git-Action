@@ -4,6 +4,16 @@ This repository includes a **GitHub Actions** workflow named **`Vprofile Actions
 
 ---
 
+
+## 📌 Architecture Diagram
+
+![Workflow Diagram](Github-Action.png)  
+*(Replace `workflow-diagram.png` with the actual path to your diagram image)*
+
+The diagram above illustrates the workflow steps from code push to production deployment.
+
+---
+
 ## 📌 Workflow Overview
 
 The workflow is defined in [`.github/workflows`](.) and can be triggered manually via **`workflow_dispatch`** and Push Event.
